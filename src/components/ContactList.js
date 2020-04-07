@@ -1,5 +1,6 @@
 import React from 'react';
 import './Essai.css'
+import Contact from './Contact'
 
 const users = [
     {
@@ -29,23 +30,31 @@ const users = [
     }
 ];
 
-const ContactList = () => (
-    <div>
-        {users.map(item => (
-         <div className="Contact">
-         <img className="avatar" src= {item.avatar}  alt=""/>
-             <div className="status">
-                 <h4 className="name">{item.name}</h4>
-                 <p className="status">
-                     <span className={item.online ? 'status-online' 
-                         : 'status-offline'}>
-                     </span>
-                     <p className="status-text"> {item.online === true ? 'online' : 'offline'} </p>
-                 </p>
-             </div> 
-         </div>   
-        ))}
-    </div>
-)
+const ContactList = () => {
+    return <>
+    {users.map(user => (
+      <Contact name={user.name} avatar={user.avatar} online={user.online} />
+    ))}
+    </>
+  }
+
+//const ContactList = () => (
+//    <div>
+//        {users.map(item => (
+//         <div className="Contact">
+//         <img className="avatar" src= {item.avatar}  alt=""/>
+//             <div className="status">
+//                 <h4 className="name">{item.name}</h4>
+//                 <p className="status">
+//                     <span className={item.online ? 'status-online' 
+//                         : 'status-offline'}>
+//                     </span>
+//                     <p className="status-text"> {item.online === true ? 'online' : 'offline'} </p>
+//                 </p>
+//             </div> 
+//         </div>   
+//        ))}
+//    </div>
+//)
 
   export default ContactList

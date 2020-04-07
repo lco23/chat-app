@@ -3,6 +3,16 @@ import './App.css';
 import ContactList from './components/ContactList'
 
 
+function App() {
+  return (
+    <div>
+      <ContactList/>
+    </div>
+  )
+}
+
+export default App;
+
 //const bob = {
 //  name : "Bob Dyvan",
 //  avatar : "https://randomuser.me/api/portraits/men/74.jpg",
@@ -32,17 +42,6 @@ import ContactList from './components/ContactList'
 //    </div>
 //  );
 //}
-
-function App() {
-  return (
-    <di>
-      <ContactList/>
-    </di>
-  )
-}
-
-export default App;
-
 
 /* <div className = "Contact2"> */
 /* <img className="avatar" src="https://randomuser.me/api/portraits/men/63.jpg" alt ="Jannot" /> */
